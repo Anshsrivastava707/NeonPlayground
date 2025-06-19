@@ -2004,154 +2004,67 @@ button:focus-visible {
 @media (max-width: 480px) {
   .game-selection {
     grid-template-columns: 1fr;
-    max-width: 360px;
-    gap: var(--spacing-m);
+    max-width: 100vw;
+    gap: var(--spacing-s);
+    padding: 0 var(--spacing-xs);
   }
-  
   .game-card {
     width: 100%;
-    height: 300px;
-    min-height: auto;
+    min-width: 0;
+    max-width: 100vw;
+    height: auto;
+    min-height: 200px;
+    padding: var(--spacing-m) var(--spacing-s);
+    margin: 0 0 var(--spacing-s) 0;
+    box-sizing: border-box;
   }
-  
-  .game-icon {
-    font-size: 48px;
-  }
-  
-  .game-title {
-    font-size: 1.25rem;
-  }
-  
-  .game-description {
-    font-size: 0.9rem;
-  }
-  
-  .tic-tac-toe-board {
-    grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(3, 80px);
-    gap: 8px;
-    padding: var(--spacing-m);
-  }
-  
-  .tic-tac-toe-cell {
-    font-size: 2.5rem;
-  }
-  
-  .snake-game {
-    width: 280px;
-    height: 280px;
-  }
-  
-  .simon-game {
-    width: 280px;
-    height: 280px;
-  }
-  
-  .simon-button {
-    width: 130px;
-    height: 130px;
-  }
-  
-  .simon-center {
-    width: 120px;
-    height: 120px;
-    font-size: 1.25rem;
-  }
-  
-  .memory-grid {
-    grid-template-columns: repeat(4, 70px);
-    grid-template-rows: repeat(4, 70px);
-    gap: 8px;
-  }
-  
-  .memory-card,
-  .card-front,
-  .card-back {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .card-back {
-    font-size: 1.75rem;
-  }
-  
-  .rps-buttons {
-    flex-direction: column;
-    gap: var(--spacing-s);
-  }
-  
-  .rps-button {
-    min-width: 120px;
-    min-height: 80px;
-  }
-  
-  .rps-choice {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .choice-emoji {
-    font-size: 2.5rem;
-  }
-  
-  .whack-area {
-    grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(3, 80px);
-    gap: 8px;
-    padding: var(--spacing-m);
-  }
-  
-  .mole-hole {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .mole {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .minesweeper-grid {
-    grid-template-columns: repeat(9, 28px);
-    grid-template-rows: repeat(9, 28px);
-    gap: 2px;
-  }
-  
-  .ms-cell {
-    width: 28px;
-    height: 28px;
-    font-size: 12px;
-  }
-  
-  .ms-cell.flagged::after {
-    font-size: 16px;
-    top: 6px;
-    left: 6px;
-  }
-  
-  .game-status {
-    font-size: 0.9rem;
-    padding: var(--spacing-s);
-  }
-  
-  .stat-label {
-    font-size: 0.7rem;
-  }
-  
-  .stat-value {
-    font-size: 1.25rem;
-  }
-  
-  .header-container {
-    padding: var(--spacing-s);
-  }
-  
-  main {
-    padding: var(--spacing-m);
-  }
-  
   .game-container {
-    padding: var(--spacing-m);
+    padding: var(--spacing-s) var(--spacing-xs);
+    min-width: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  main {
+    padding: var(--spacing-xs);
+    min-width: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  .game-title {
+    font-size: 1.1rem;
+  }
+  .game-description {
+    font-size: 0.85rem;
+  }
+  .game-icon {
+    font-size: 36px;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-xs);
+    gap: var(--spacing-xs);
+  }
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+  }
+  .about-link {
+    font-size: 0.9rem;
+    margin-left: 0.5em;
+    height: 1.2rem;
+    padding-top: 0;
+  }
+  /* Prevent horizontal scroll */
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  /* Make buttons and touch targets larger */
+  button, .btn-primary, .game-card {
+    min-height: 44px;
+    min-width: 44px;
+    font-size: 1rem;
   }
 }
 
@@ -2973,7 +2886,7 @@ button:focus-visible {
       font-size: 0.9rem;
     }
   }
-}
+
 
 /* More Games Incoming Card */
 .more-games-card {
